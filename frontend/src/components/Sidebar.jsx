@@ -19,7 +19,7 @@ export default function Sidebar() {
       onMouseLeave={handleMouseLeave}
     >
       <div className={`sidebar ${isSidebarVisible ? "visible" : "hidden"}`}>
-        <h2>SideBar</h2>
+        <h2>Sidebar</h2>
       </div>
     </div>
   );
