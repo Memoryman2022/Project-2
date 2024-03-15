@@ -127,6 +127,7 @@ nav {
 /*ABOUT PAGE*/
 
 .about-container {
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
