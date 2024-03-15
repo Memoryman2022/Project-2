@@ -23,7 +23,7 @@ function App() {
         <div className="main-container">
           <Sidebar />
           <Routes>
-            <Route path="/" element={<Welcome />} />
+            <Route path="/welcome" element={<Welcome />} />
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />

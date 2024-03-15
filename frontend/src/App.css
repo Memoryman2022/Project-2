@@ -60,6 +60,21 @@ nav {
 
 /*********************PAGES**********************/
 
+/*WELCOME PAGE*/
+
+.welcome-container {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.welcome-div {
+  position: absolute;
+}
+
 /*HOME PAGE*/
 
 .home-container {
@@ -71,7 +86,7 @@ nav {
   height: 100vh;
 }
 
-.home-Div {
+.home-div {
   position: absolute;
 }
 

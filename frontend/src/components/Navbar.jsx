@@ -8,6 +8,9 @@ export default function Navbar() {
     <nav>
       <ul className="navbar-list">
         <li className="navbar-item">
+          <Link to="/welcome">Welcome</Link>
+        </li>
+        <li className="navbar-item">
           <Link to="/">Home</Link>
         </li>
         <li className="navbar-item">
