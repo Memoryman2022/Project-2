@@ -5,6 +5,12 @@
   padding: 0;
   text-align: center;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 /***********COMPONANTS*****************/
 
 /*NAVBAR*/
@@ -62,6 +68,10 @@ nav {
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+
+.home-Div {
+  position: absolute;
 }
 
 /*ABOUT PAGE*/
