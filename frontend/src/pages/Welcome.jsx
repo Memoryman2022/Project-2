@@ -13,7 +13,7 @@ function Welcome() {
           <label>
             <input type="text" password="password" placeholder="PASSWORD" />
           </label>
-          <div className="login-buttons">
+          <div className="login-buttons-div">
             <button className="login-button" type="submit">
               SUBMIT
             </button>

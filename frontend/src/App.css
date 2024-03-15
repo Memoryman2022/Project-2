@@ -73,6 +73,17 @@ nav {
 
 .welcome-div {
   position: absolute;
+  color: rgb(45, 247, 247);
+}
+
+.login-buttons-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-button {
+  background-color: black;
+  color: rgb(45, 247, 247);
 }
 
 /*HOME PAGE*/
