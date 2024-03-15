@@ -9,18 +9,23 @@
 /*NAVBAR*/
 nav {
   background-color: #535151;
-  padding: 20px;
+  padding: 20px 0px 20px;
   width: 100%;
   color: #ff2f2f;
   text-align: center;
 }
 
-li {
+.navbar-list {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
   display: inline;
   margin: 1rem;
 }
 
-a:hover {
+.navbar-item a:hover {
   text-decoration: underline;
 }
 /*FOOTER*/
