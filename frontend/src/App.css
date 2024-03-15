@@ -5,11 +5,12 @@
   padding: 0;
   text-align: center;
 }
+/***********COMPONANTS*****************/
 
 /*NAVBAR*/
 nav {
   background-color: #535151;
-  padding: 20px 0px 20px;
+  padding: 40px 0px 40px;
   width: 100%;
   color: #ff2f2f;
   text-align: center;
@@ -28,6 +29,7 @@ nav {
 .navbar-item a:hover {
   text-decoration: underline;
 }
+
 /*FOOTER*/
 .footer {
   position: fixed;
@@ -35,10 +37,22 @@ nav {
   bottom: 0;
   width: 100%;
   background-color: #4c4a4a;
-  padding: 20px;
+  padding: 20px 0 20px;
   color: #ff2f2f;
   text-align: center;
 }
+
+/*SIDEBAR*/
+
+.sidebar-container {
+  color: #2a4255;
+  background-color: lightgray;
+  padding: 10px;
+  width: 15%;
+  height: 100vh;
+}
+
+/*********************PAGES**********************/
 
 /*HOME PAGE*/
 

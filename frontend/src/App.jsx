@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 //components
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import Sidebar from "./components/Sidebar.jsx";
 //css
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
     <>
       <div className="App">
         <Navbar />
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
