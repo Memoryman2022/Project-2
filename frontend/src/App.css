@@ -44,7 +44,7 @@ nav {
   width: 100%;
   background-color: #4c4a4a;
   padding: 20px 0 20px;
-  color: #ff2f2f;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -63,6 +63,7 @@ nav {
 /*HOME PAGE*/
 
 .home-container {
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;

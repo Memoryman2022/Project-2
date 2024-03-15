@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/react.svg";
 //pages
+import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -22,6 +23,7 @@ function App() {
         <div className="main-container">
           <Sidebar />
           <Routes>
+            <Route path="/" element={<Welcome />} />
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
