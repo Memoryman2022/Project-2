@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import focusImage from "../assets/focus.png";
 
 function Welcome() {
   return (
     <div className="welcome-container">
       <div className="welcome-div">
-        <h2>Welcome Page</h2>
+        <img className="logo-image" src={focusImage} alt="Focus" />
+        <h2>LOGIN</h2>
         <form>
           <label>
             <input type="text" name="name" placeholder="NAME" />
