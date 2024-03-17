@@ -105,8 +105,8 @@ nav {
 }
 
 .logo-image {
-  width: 25%;
-  padding-bottom: 200px;
+  height: 100%;
+  width: 100%;
 }
 
 .login-buttons-div {
