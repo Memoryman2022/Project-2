@@ -15,15 +15,27 @@
 
 /*NAVBAR*/
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: #100f0f;
-  padding: 40px 0px 40px;
+  padding: 20px 0px 20px;
   width: 100%;
-  color: #ff2f2f;
+  color: #2ffffc;
   text-align: center;
 }
 
+.nav-logo {
+  width: 100px;
+  margin-left: 70px;
+}
+
 .navbar-list {
-  margin: 0;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin-right: 70px;
   padding: 0;
 }
 
@@ -93,8 +105,8 @@ nav {
 }
 
 .logo-image {
-  width: 35%;
-  padding-bottom: 200px;
+  height: 100%;
+  width: 100%;
 }
 
 .login-buttons-div {
@@ -132,8 +144,8 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
   flex-direction: column;
+  padding: 40px;
 }
 
 .about-container p {
