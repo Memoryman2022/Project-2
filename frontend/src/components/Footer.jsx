@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  return <div className="footer">Footer</div>;
+  return <div className="footer">FOOTER</div>;
 }

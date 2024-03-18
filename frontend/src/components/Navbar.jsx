@@ -9,13 +9,13 @@ export default function Navbar() {
       <img className="nav-logo" src={logo} alt="image-logo" />
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/welcome">Welcome</Link>
+          <Link to="/welcome">WELCOME</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/about">About</Link>
+          <Link to="/about">ABOUT</Link>
         </li>
       </ul>
     </nav>
