@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import movies from "../assets/movies.png";
 import series from "../assets/series.jpg";
-import ListMovies from "./ListMovies";
 
 const Select = () => {
 	return (
