@@ -63,7 +63,15 @@ nav {
   background-color: #111010;
   padding: 20px 0 20px;
   color: #1effe5;
-  text-align: center;
+}
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 100px;
 }
 
 /*SIDEBAR*/
@@ -219,7 +227,7 @@ nav {
   align-items: center;
   width: 100%;
   flex-direction: column;
-  padding: 40px;
+  padding: 60px;
 }
 
 .about-container p {
