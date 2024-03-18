@@ -50,6 +50,7 @@ function Welcome() {
       )}
 
       <div className="content">
+        <img className="welcome-logo" src={focusImage} alt="logo" />
         {showLogin ? (
           <div className="welcome-div">
             <h2>LOGIN</h2>

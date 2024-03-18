@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import sidebarImage from "../assets/film.png";
 // import "./Sidebar.css";
 
 export default function Sidebar() {
@@ -19,7 +20,7 @@ export default function Sidebar() {
       onMouseLeave={handleMouseLeave}
     >
       <div className={`sidebar ${isSidebarVisible ? "visible" : "hidden"}`}>
-        <h2>SIDEBAR</h2>
+        <img className="sidebar-image" src={sidebarImage} alt="sidebar" />
       </div>
     </div>
   );
