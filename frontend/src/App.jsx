@@ -13,31 +13,33 @@ import ListMovies from "./pages/ListMovies.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Sidebar from "./components/Sidebar.jsx";
+import ReviewForm from "./components/ReviewForm.jsx";
 //css
 import "./App.css";
 import Select from "./pages/Select.jsx";
 
 function App() {
-	return (
-		<>
-			<div className="App">
-				<Navbar />
+  return (
+    <>
+      <div className="App">
+        <Navbar />
 
-				<div className="main-container">
-					<Sidebar />
-					<Routes>
-						<Route path="/welcome" element={<Welcome />} />
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="*" element={<NotFound />} />
-						<Route path="/ListMovies" element={<ListMovies />} />
-						<Route path="/Select" element={<Select />} />
-					</Routes>
-				</div>
-				<Footer />
-			</div>
-		</>
-	);
+        <div className="main-container">
+          <Sidebar />
+          <Routes>
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/ListMovies" element={<ListMovies />} />
+            <Route path="/Select" element={<Select />} />
+            <Route path="/ReviewForm" element={<ReviewForm />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;

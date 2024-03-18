@@ -96,6 +96,37 @@ nav {
   width: 100px;
 }
 
+/*NEW_REVIEW_FORM*/
+
+.new-review-div {
+  background-color: #100f0f;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+
+.form-header {
+}
+
+.submit-new-review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.form-buttons-div {
+}
+
+.submit-review-btn-form {
+}
+
 /*********************PAGES**********************/
 
 /*WELCOME PAGE*/
