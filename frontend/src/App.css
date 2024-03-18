@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
@@ -106,10 +110,11 @@ nav {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 84.5vh;
 }
 
 .form-header {
+  color: #17fbff;
 }
 
 .submit-new-review-form {
@@ -122,9 +127,12 @@ nav {
 }
 
 .form-buttons-div {
+  background-color: #333;
 }
 
 .submit-review-btn-form {
+  color: #333;
+  background-color: #17fbff;
 }
 
 /*********************PAGES**********************/
