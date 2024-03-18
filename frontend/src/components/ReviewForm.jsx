@@ -1,17 +1,49 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+const StarRating = ({ value, onChange }) => {
+  const [hoverValue, setHoverValue] = useState(null);
+
+  const handleStarHover = (index) => {
+    setHoverValue(index);
+  };
+
+  const handleStarClick = (index) => {
+    onChange(index);
+  };
+
+  const stars = Array.from({ length: 5 }, (_, index) => index + 1);
+
+  return (
+    <div>
+      {stars.map((index) => (
+        <span
+          key={index}
+          className={
+            index <= (hoverValue || value) ? "star-filled" : "star-empty"
+          }
+          onMouseEnter={() => handleStarHover(index)}
+          onMouseLeave={() => setHoverValue(null)}
+          onClick={() => handleStarClick(index)}
+        >
+          ★
+        </span>
+      ))}
+    </div>
+  );
+};
 
 const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
   const [name, setName] = useState("");
   const [genre, setGenre] = useState("");
-  const [image, setImage] = useState("");
+  const [review, setReview] = useState("");
   const [rating, setRating] = useState("");
   const nav = useNavigate();
 
   const handleSubmitNewReview = (e) => {
     e.preventDefault();
 
-    if (!name || !genre || !image || !rating) {
+    if (!name || !genre || !review || !rating) {
       alert("Please fill in all fields.");
       return;
     }
@@ -19,7 +51,7 @@ const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
     const newReview = {
       name,
       genre,
-      image,
+      review,
       rating,
       id: reviews.length + 1,
     };
@@ -27,7 +59,7 @@ const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
     setReviews([newReview, ...reviews]);
     setName("");
     setGenre("");
-    setImage("");
+    setReview("");
     setRating("");
 
     nav("/");
@@ -66,28 +98,21 @@ const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
           />
         </label>
         <label>
-          ADD IMAGE:
-          <input
-            type="url"
-            name="image"
-            placeholder="IMAGE URL"
-            value={image}
+          ADD REVIEW:
+          <textarea
+            name="review"
+            placeholder="WRITE HERE..."
+            value={review}
             onChange={(event) => {
-              setImage(event.target.value);
+              setReview(event.target.value);
             }}
+            rows={8}
+            cols={50}
           />
         </label>
         <label>
           RATING:
-          <input
-            type="number"
-            name="rating"
-            placeholder="RATING"
-            value={rating}
-            onChange={(event) => {
-              setRating(event.target.value);
-            }}
-          />
+          <StarRating value={rating} onChange={setRating} />
         </label>
         <div className="form-buttons-div">
           <button className="submit-review-btn-form" type="submit">

@@ -7,7 +7,9 @@ import spotlight from "../assets/spotlight.png";
 function About() {
   return (
     <div className="about-container">
-      <h2>Introducing FOCUS: The Ultimate Film Recommendation Experience.</h2>
+      <h1>FOCUS </h1>
+      <br />
+      <h2>THE ULTIMATE FILM RECOMMENDATION EXPERIENCE</h2>
       <p>
         In a world overwhelmed by endless scrolling and the paradox of choice on
         streaming platforms like Netflix and Amazon Prime, finding the perfect
@@ -68,8 +70,8 @@ function About() {
         recommendations that resonate with your personal taste.
         <br /> <br />
         <h2>
-          Welcome to FOCUS – Where every recommendation is a step closer to your
-          next favorite film.
+          WELCOME TO FOCUS – WHERE EVERY RECOMMENDATION IS A STEP CLOSER TO YOUR
+          NEXT FAVOURITE FILM
         </h2>
       </p>
     </div>
