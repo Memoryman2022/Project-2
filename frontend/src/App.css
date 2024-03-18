@@ -15,31 +15,28 @@
 
 /*NAVBAR*/
 nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #100f0f;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #100f0f;
-
-  width: 100%;
-  color: #2ffffc;
-  text-align: center;
-
+	width: 100%;
+	color: #2ffffc;
+	text-align: center;
 }
 
 .nav-logo {
-  width: 60px;
-  margin-left: 70px;
+	width: 60px;
+	margin-left: 70px;
 }
 
 .navbar-list {
-  display: flex;
-  width: 400px;
-  justify-content: space-between;
-  margin-right: 70px;
-  padding: 0;
-
+	display: flex;
+	width: 400px;
+	justify-content: space-between;
+	margin-right: 70px;
+	padding: 0;
 }
 
 .navbar-item {
@@ -94,22 +91,22 @@ nav {
 /*WELCOME PAGE*/
 
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .overlay-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+	max-width: 100%;
+	max-height: 100hv;
+	object-fit: cover;
 }
 
 .welcome-container {
@@ -122,14 +119,12 @@ nav {
 }
 
 .welcome-div {
-
-  color: rgb(45, 247, 247);
+	color: rgb(45, 247, 247);
 }
 
 .logo-image {
-  height: 100%;
-  width: 110%;
-
+	height: 100%;
+	width: 110%;
 }
 
 .login-buttons-div {
@@ -162,15 +157,13 @@ nav {
 /*ABOUT PAGE*/
 
 .about-container {
-
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-direction: column;
-  padding: 40px;
-
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: column;
+	padding: 40px;
 }
 
 .about-container p {
@@ -212,6 +205,10 @@ nav {
 		background-image: url("./assets/focus.png");
 	}
 }
+.imgCar {
+	display: flex;
+	justify-content: center;
+}
 
 .imgCar img {
 	border-radius: 20px;
@@ -230,21 +227,25 @@ nav {
 .resultMovies {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .movieCard {
 	border: 1px solid grey;
 	border-radius: 10px;
 	box-shadow: 1px 1px 20px white;
-	width: 100px;
-	height: 25vh;
+	width: 120px;
+	height: 20vh;
 	margin: 5px;
 }
 
 .movieCard img {
 	border-radius: 5px;
 	margin: 2px;
-	width: 80%;
+	width: 75%;
+}
+.movieCard h6 {
+	margin: 2px;
 }
 
 @keyframes scale-up-center {
@@ -254,6 +255,26 @@ nav {
 	100% {
 		transform: scale(1);
 	}
+}
+
+.total-movies select {
+	margin: 5px 10px;
+	height: 30px;
+	width: 90px;
+	text-align: center;
+	border: none;
+	border-radius: 20px;
+}
+
+.total-movies form {
+	margin: 24px;
+	color: blueviolet;
+	text-shadow: 2px 2px 15px white;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-weight: 700;
+	letter-spacing: 4px;
+	font-style: italic;
 }
 
 /*Select*/

@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import axios from "axios";
 
-export default function ListMovies() {
+export default function ListSeries() {
 	let token = sessionStorage.getItem("token");
 
-	const [moviesList, setMoviesList] = useState([]);
+	const [seriesList, setSeriesList] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [imgCar, setImgCar] = useState([]);
 	const [genre, setGenre] = useState("");
@@ -18,13 +18,13 @@ export default function ListMovies() {
 
 	useEffect(() => {
 		const endPoint =
-			"https://api.themoviedb.org/3/trending/movie/week?language=en-US";
+			"https://api.themoviedb.org/3/trending/tv/week?language=en-US";
 		axios.defaults.headers.common["Authorization"] = "Bearer " + tokenApi;
 		axios
 			.get(endPoint)
 			.then((res) => {
 				const apiData = res.data.results;
-				setMoviesList(apiData.sort((a, b) => b.vote_average - a.vote_average));
+				setSeriesList(apiData.sort((a, b) => b.vote_average - a.vote_average));
 				setLoading(false);
 				setImgCar(apiData.map((img) => img.poster_path));
 			})
@@ -41,13 +41,13 @@ export default function ListMovies() {
 	}, [imgCar]);
 
 	useEffect(() => {
-		const endPoint = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=revenue.desc&with_genres=${genre}`;
+		const endPoint = `https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=en-US&page=1&sort_by=revenue.asc&with_genres=${genre}`;
 		axios.defaults.headers.common["Authorization"] = "Bearer " + tokenApi;
 		axios
 			.get(endPoint)
 			.then((res) => {
 				const apiData = res.data.results;
-				setMoviesList(apiData.sort((a, b) => b.vote_average - a.vote_average));
+				setSeriesList(apiData.sort((a, b) => b.vote_average - a.vote_average));
 				setLoading(false);
 			})
 			.catch((err) => {
@@ -55,10 +55,51 @@ export default function ListMovies() {
 			});
 	}, [genre]);
 
-	console.log(moviesList);
+	console.log(seriesList);
+
+	function DraggableItem({ data, handleDragging }) {
+		const handleDragStart = (e) => {
+			e.dataTransfer.setData("text", `${data.id}`);
+			handleDragging(true);
+		};
+
+		return (
+			<div draggable onDragStart={handleDragStart}>
+				<p>holla</p>
+				<p>Hi</p>
+			</div>
+		);
+	}
+
+	// Componente para los contenedores donde se pueden soltar los elementos
+	function DropContainer({ items, handleUpdateList, handleDragging }) {
+		const handleDrop = (e) => {
+			e.preventDefault();
+			const id = +e.dataTransfer.getData("text");
+			handleUpdateList(id);
+			handleDragging(false);
+		};
+
+		const handleDragOver = (e) => e.preventDefault();
+
+		return (
+			<div onDrop={handleDrop} onDragOver={handleDragOver}>
+				{items.map((item) => (
+					<DraggableItem
+						key={item.id}
+						data={item}
+						handleDragging={handleDragging}
+					/>
+				))}
+			</div>
+		);
+	}
 
 	return (
 		<>
+			<DraggableItem />
+			<DropContainer />
+
 			<section className="total-movies animatedBakground">
 				{genre == "" ? (
 					<div className="imgCar">
@@ -83,21 +124,20 @@ export default function ListMovies() {
 							onChange={(e) => setGenre(e.target.value)}
 						>
 							<option value="">-- None --</option>
-							<option value="28">Action</option>
-							<option value="12">Adventure</option>
+							<option value="10759">Action & Adventure</option>
 							<option value="16">Animation</option>
 							<option value="35">Comedy </option>
 							<option value="80">Crime</option>
 							<option value="99">Documentary</option>
 							<option value="18">Drama</option>
 							<option value="10751">Family</option>
-							<option value="14">Fantasy</option>
-							<option value="36">History</option>
-							<option value="27">Horror</option>
-							<option value="10402">Romance</option>
-							<option value="878">Scifi</option>
-							<option value="53">Thriller</option>
-							<option value="10752">War</option>
+							<option value="10762">Kids</option>
+							<option value="9648">Mystery</option>
+							<option value="10763">News</option>
+							<option value="10764">Reality</option>
+							<option value="10765">Scifi & Fantasy</option>
+							<option value="10766">Soap</option>
+							<option value="10768">War & Politics</option>
 							<option value="37">Western</option>
 						</select>
 					</label>
@@ -105,7 +145,7 @@ export default function ListMovies() {
 				<div className="resultMovies">
 					{genre == ""
 						? null
-						: moviesList.map((movie) => {
+						: seriesList.map((movie) => {
 								return (
 									<div key={movie.id} className="movieCard">
 										<h6>{movie.title}</h6>

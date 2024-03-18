@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import ListMovies from "./pages/ListMovies.jsx";
+import ListSeries from "./pages/ListSeries.jsx";
 //components
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -30,6 +31,7 @@ function App() {
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="*" element={<NotFound />} />
+						<Route path="/ListSeries" element={<ListSeries />} />
 						<Route path="/ListMovies" element={<ListMovies />} />
 						<Route path="/Select" element={<Select />} />
 					</Routes>

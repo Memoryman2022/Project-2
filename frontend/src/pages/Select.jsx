@@ -15,10 +15,12 @@ const Select = () => {
 						<label className="titleSelect"> MOVIES</label>
 					</div>
 				</Link>
-				<div className="labelMovies">
-					<img src={series} alt="Series" />
-					<label className="titleSelect">SERIES</label>{" "}
-				</div>
+				<Link to="/ListSeries">
+					<div className="labelMovies">
+						<img src={series} alt="Series" />
+						<label className="titleSelect">SERIES</label>{" "}
+					</div>
+				</Link>
 			</div>
 		</div>
 	);
