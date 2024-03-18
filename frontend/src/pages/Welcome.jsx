@@ -73,9 +73,11 @@ function Welcome() {
                 />
               </label>
               <div className="login-buttons-div">
-                <button className="login-button" type="submit">
-                  SUBMIT
-                </button>
+                <Link to="/">
+                  <button className="login-button" type="submit">
+                    SUBMIT
+                  </button>
+                </Link>
               </div>
             </form>
           </div>
