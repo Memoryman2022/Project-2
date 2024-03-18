@@ -3,42 +3,45 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function ListMovies() {
-	let token = sessionStorage.getItem("token");
+  let token = sessionStorage.getItem("token");
+
 
 	const [moviesList, setMoviesList] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [imgCar, setImgCar] = useState([]);
 	const [genre, setGenre] = useState("");
 
-	const [activeIndex, setActiveIndex] = useState(0);
 
-	const apiKey = "3d0dbaba1ed955f27af66d0c59898ec2";
-	const tokenApi =
-		"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZDBkYmFiYTFlZDk1NWYyN2FmNjZkMGM1OTg5OGVjMiIsInN1YiI6IjY1ZjFjZDc0NDcwZWFkMDE2MjljNmZjNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9uzeZ1bJ9uNWBN-WlFCksLUIOXR9mIeF_IMcr0IczAQ";
+  const [activeIndex, setActiveIndex] = useState(0);
 
-	useEffect(() => {
-		const endPoint =
-			"https://api.themoviedb.org/3/trending/movie/week?language=en-US";
-		axios.defaults.headers.common["Authorization"] = "Bearer " + tokenApi;
-		axios
-			.get(endPoint)
-			.then((res) => {
-				const apiData = res.data.results;
-				setMoviesList(apiData.sort((a, b) => b.vote_average - a.vote_average));
-				setLoading(false);
-				setImgCar(apiData.map((img) => img.poster_path));
-			})
-			.catch((err) => {
-				console.error(err);
-			});
-	}, []);
+  const apiKey = "3d0dbaba1ed955f27af66d0c59898ec2";
+  const tokenApi =
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZDBkYmFiYTFlZDk1NWYyN2FmNjZkMGM1OTg5OGVjMiIsInN1YiI6IjY1ZjFjZDc0NDcwZWFkMDE2MjljNmZjNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9uzeZ1bJ9uNWBN-WlFCksLUIOXR9mIeF_IMcr0IczAQ";
 
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			setActiveIndex((prevIndex) => (prevIndex + 1) % imgCar.length);
-		}, 7000);
-		return () => clearInterval(intervalId);
-	}, [imgCar]);
+  useEffect(() => {
+    const endPoint =
+      "https://api.themoviedb.org/3/trending/movie/week?language=en-US";
+    axios.defaults.headers.common["Authorization"] = "Bearer " + tokenApi;
+    axios
+      .get(endPoint)
+      .then((res) => {
+        const apiData = res.data.results;
+        setMoviesList(apiData.sort((a, b) => b.vote_average - a.vote_average));
+        setLoading(false);
+        setImgCar(apiData.map((img) => img.poster_path));
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % imgCar.length);
+    }, 7000);
+    return () => clearInterval(intervalId);
+  }, [imgCar]);
+
 
 	useEffect(() => {
 		const endPoint = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=revenue.desc&with_genres=${genre}`;
@@ -55,7 +58,9 @@ export default function ListMovies() {
 			});
 	}, [genre]);
 
-	console.log(moviesList);
+
+  console.log(moviesList);
+
 
 	return (
 		<>

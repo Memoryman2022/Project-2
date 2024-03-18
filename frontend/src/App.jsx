@@ -14,15 +14,17 @@ import ListSeries from "./pages/ListSeries.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Sidebar from "./components/Sidebar.jsx";
+import ReviewForm from "./components/ReviewForm.jsx";
 //css
 import "./App.css";
 import Select from "./pages/Select.jsx";
 
 function App() {
-	return (
-		<>
-			<div className="App">
-				<Navbar />
+  return (
+    <>
+      <div className="App">
+        <Navbar />
+
 
 				<div className="main-container">
 					<Sidebar />
@@ -40,6 +42,7 @@ function App() {
 			</div>
 		</>
 	);
+
 }
 
 export default App;

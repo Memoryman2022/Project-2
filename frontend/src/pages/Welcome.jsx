@@ -50,7 +50,9 @@ function Welcome() {
       )}
 
       <div className="content">
-        {showLogin ? (
+        <img className="welcome-logo" src={focusImage} alt="logo" />
+
+        {showLogin && (
           <div className="welcome-div">
             <h2>LOGIN</h2>
             <form onSubmit={handleLogin}>
@@ -73,16 +75,12 @@ function Welcome() {
                 />
               </label>
               <div className="login-buttons-div">
-                <Link to="/">
-                  <button className="login-button" type="submit">
-                    SUBMIT
-                  </button>
-                </Link>
+                <button className="login-button" type="submit">
+                  SUBMIT
+                </button>
               </div>
             </form>
           </div>
-        ) : (
-          <img className="logo-image" src={focusImage} alt="Focus" />
         )}
       </div>
     </div>
