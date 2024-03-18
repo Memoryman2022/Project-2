@@ -180,8 +180,10 @@ nav {
 /*NOT FOUND*/
 
 .notFound-container {
+
 	background-color: black;
 	display: flex;
+  flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -353,4 +355,9 @@ nav {
 	100% {
 		transform: translate(0);
 	}
+
+}
+
+.cut-image {
+  width: 100px;
 }
