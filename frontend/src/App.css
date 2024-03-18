@@ -1,20 +1,21 @@
 #root {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
 }
 /***********COMPONANTS*****************/
 
 /*NAVBAR*/
 nav {
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,6 +25,7 @@ nav {
   width: 100%;
   color: #2ffffc;
   text-align: center;
+
 }
 
 .nav-logo {
@@ -37,53 +39,54 @@ nav {
   justify-content: space-between;
   margin-right: 70px;
   padding: 0;
+
 }
 
 .navbar-item {
-  display: inline;
-  margin: 1rem;
+	display: inline;
+	margin: 1rem;
 }
 
 .navbar-item a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /*FOOTER*/
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #111010;
-  padding: 20px 0 20px;
-  color: #1effe5;
-  text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #111010;
+	padding: 20px 0 20px;
+	color: #1effe5;
+	text-align: center;
 }
 
 /*SIDEBAR*/
 
 .sidebar-container {
-  color: #17fbff;
-  background-color: rgb(232, 226, 226);
-  position: fixed;
-  padding: 0;
-  width: 0;
-  height: 100vh;
-  transition: width 0.3 ease;
+	color: #17fbff;
+	background-color: rgb(232, 226, 226);
+	position: fixed;
+	padding: 0;
+	width: 0;
+	height: 100vh;
+	transition: width 0.3 ease;
 }
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  color: rgb(52, 255, 245);
-  padding: 1px;
-  transition: width 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	height: 100%;
+	background-color: #333;
+	color: rgb(52, 255, 245);
+	padding: 1px;
+	transition: width 0.3s ease;
 }
 
 .sidebar.hidden {
-  width: 0;
+	width: 0;
 }
 
 /*********************PAGES**********************/
@@ -110,53 +113,56 @@ nav {
 }
 
 .welcome-container {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
 }
 
 .welcome-div {
+
   color: rgb(45, 247, 247);
 }
 
 .logo-image {
   height: 100%;
   width: 110%;
+
 }
 
 .login-buttons-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .login-button {
-  background-color: black;
-  color: rgb(45, 247, 247);
-  width: 150px;
+	background-color: black;
+	color: rgb(45, 247, 247);
+	width: 150px;
 }
 
 /*HOME PAGE*/
 
 .home-container {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
 }
 
 .home-div {
-  position: absolute;
+	position: absolute;
 }
 
 /*ABOUT PAGE*/
 
 .about-container {
+
   background-color: black;
   display: flex;
   justify-content: center;
@@ -164,19 +170,187 @@ nav {
   width: 100%;
   flex-direction: column;
   padding: 40px;
+
 }
 
 .about-container p {
-  width: 60%;
+	width: 60%;
 }
 
 /*NOT FOUND*/
 
 .notFound-container {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+/*ListMovies*/
+
+.animatedBakground {
+	width: 100%;
+	height: 100vh;
+	background-size: 70% 100%;
+	background-position: center;
+	animation: changeBackground 30s infinite;
+	background-color: black;
+	background-repeat: no-repeat;
+}
+
+@keyframes changeBackground {
+	0% {
+		background-image: url("./assets/focus.png");
+	}
+	75% {
+		background-image: url("./assets/Logo.png");
+	}
+
+	100% {
+		background-image: url("./assets/focus.png");
+	}
+}
+
+.imgCar img {
+	border-radius: 20px;
+	width: 40%;
+	animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.total-movies {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.resultMovies {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.movieCard {
+	border: 1px solid grey;
+	border-radius: 10px;
+	box-shadow: 1px 1px 20px white;
+	width: 100px;
+	height: 25vh;
+	margin: 5px;
+}
+
+.movieCard img {
+	border-radius: 5px;
+	margin: 2px;
+	width: 80%;
+}
+
+@keyframes scale-up-center {
+	0% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/*Select*/
+
+.titleSelect {
+	font-style: italic;
+	text-transform: uppercase;
+	color: black;
+	font-weight: 600;
+	font-size: 60px;
+	text-shadow: 1px 1px 20px white;
+	animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand {
+	0% {
+		letter-spacing: -0.5em;
+		opacity: 0;
+	}
+	40% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.imgSelect {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.imgSelect img {
+	width: 100%;
+	height: 50vh;
+	border-radius: 20px;
+	animation: slit-in-vertical 3s ease-out both;
+}
+
+@keyframes slit-in-vertical {
+	0% {
+		transform: translateZ(-800px) rotateY(90deg);
+		opacity: 0;
+	}
+	54% {
+		transform: translateZ(-160px) rotateY(87deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateZ(0) rotateY(0);
+	}
+}
+
+.labelMovies {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.labelMovies:hover {
+	animation: vibrate-3 0.5s linear infinite both;
+}
+
+@keyframes vibrate-3 {
+	0% {
+		transform: translate(0);
+	}
+	10% {
+		transform: translate(-2px, -2px);
+	}
+	20% {
+		transform: translate(2px, -2px);
+	}
+	30% {
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		transform: translate(2px, 2px);
+	}
+	50% {
+		transform: translate(-2px, -2px);
+	}
+	60% {
+		transform: translate(2px, -2px);
+	}
+	70% {
+		transform: translate(-2px, 2px);
+	}
+	80% {
+		transform: translate(-2px, -2px);
+	}
+	90% {
+		transform: translate(2px, -2px);
+	}
+	100% {
+		transform: translate(0);
+	}
 }
