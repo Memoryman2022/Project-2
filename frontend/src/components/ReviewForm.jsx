@@ -33,7 +33,13 @@ const StarRating = ({ value, onChange }) => {
   );
 };
 
-const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
+const NewReviewForm = ({
+  addReview,
+  reviews,
+  setReviews,
+  reviewData,
+  itemId,
+}) => {
   const [name, setName] = useState("");
   const [genre, setGenre] = useState("");
   const [review, setReview] = useState("");
@@ -53,6 +59,7 @@ const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
       genre,
       review,
       rating,
+      itemId,
       id: reviews.length + 1,
     };
 
@@ -73,6 +80,7 @@ const NewReviewForm = ({ addReview, reviews, setReviews, reviewData }) => {
       </div>
 
       <form onSubmit={handleSubmitNewReview} className="submit-new-review-form">
+        {/* <h3>{reviewData.title}</h3> */}
         <label>
           FILM:
           <input
