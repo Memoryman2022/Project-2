@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import ListMovies from "./pages/ListMovies.jsx";
+import ListSeries from "./pages/ListSeries.jsx";
 //components
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -24,22 +25,24 @@ function App() {
       <div className="App">
         <Navbar />
 
-        <div className="main-container">
-          <Sidebar />
-          <Routes>
-            <Route path="/welcome" element={<Welcome />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-            <Route path="/ListMovies" element={<ListMovies />} />
-            <Route path="/Select" element={<Select />} />
-            <Route path="/ReviewForm" element={<ReviewForm />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </>
-  );
+
+				<div className="main-container">
+					<Sidebar />
+					<Routes>
+						<Route path="/welcome" element={<Welcome />} />
+						<Route path="/" element={<Home />} />
+						<Route path="/about" element={<About />} />
+						<Route path="*" element={<NotFound />} />
+						<Route path="/ListSeries" element={<ListSeries />} />
+						<Route path="/ListMovies" element={<ListMovies />} />
+						<Route path="/Select" element={<Select />} />
+					</Routes>
+				</div>
+				<Footer />
+			</div>
+		</>
+	);
+
 }
 
 export default App;
