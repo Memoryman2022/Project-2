@@ -68,7 +68,10 @@ const NewReviewForm = () => {
         {randomFilm && (
           <div>
             <h3>FILM: {randomFilm.title}</h3>
-            <img src={`${randomFilm.poster_path}`} alt={randomFilm.title} />
+            <img
+              src={`https://image.tmdb.org/t/b/w500/${randomFilm.backdrop_path}`}
+              alt={randomFilm.title}
+            />
           </div>
         )}
 
