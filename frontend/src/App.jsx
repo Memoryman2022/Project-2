@@ -25,24 +25,23 @@ function App() {
       <div className="App">
         <Navbar />
 
-
-				<div className="main-container">
-					<Sidebar />
-					<Routes>
-						<Route path="/welcome" element={<Welcome />} />
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="*" element={<NotFound />} />
-						<Route path="/ListSeries" element={<ListSeries />} />
-						<Route path="/ListMovies" element={<ListMovies />} />
-						<Route path="/Select" element={<Select />} />
-					</Routes>
-				</div>
-				<Footer />
-			</div>
-		</>
-	);
-
+        <div className="main-container">
+          <Sidebar />
+          <Routes>
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/ListSeries" element={<ListSeries />} />
+            <Route path="/ListMovies" element={<ListMovies />} />
+            <Route path="/Select" element={<Select />} />
+            <Route path="/Review" element={<ReviewForm />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;
