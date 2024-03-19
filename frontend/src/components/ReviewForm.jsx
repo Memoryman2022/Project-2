@@ -1,37 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-const StarRating = ({ value, onChange }) => {
-  const [hoverValue, setHoverValue] = useState(null);
-
-  const handleStarHover = (index) => {
-    setHoverValue(index);
-  };
-
-  const handleStarClick = (index) => {
-    onChange(index);
-  };
-
-  const stars = Array.from({ length: 5 }, (_, index) => index + 1);
-
-  return (
-    <div>
-      {stars.map((index) => (
-        <span
-          key={index}
-          className={
-            index <= (hoverValue || value) ? "star-filled" : "star-empty"
-          }
-          onMouseEnter={() => handleStarHover(index)}
-          onMouseLeave={() => setHoverValue(null)}
-          onClick={() => handleStarClick(index)}
-        >
-          ★
-        </span>
-      ))}
-    </div>
-  );
-};
+import StarRating from "./StarRating.jsx";
 
 const NewReviewForm = ({
   addReview,
@@ -40,23 +9,19 @@ const NewReviewForm = ({
   reviewData,
   itemId,
 }) => {
-  const [name, setName] = useState("");
-  const [genre, setGenre] = useState("");
   const [review, setReview] = useState("");
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState(0);
   const nav = useNavigate();
 
   const handleSubmitNewReview = (e) => {
     e.preventDefault();
 
-    if (!name || !genre || !review || !rating) {
+    if (!review || !rating) {
       alert("Please fill in all fields.");
       return;
     }
 
     const newReview = {
-      name,
-      genre,
       review,
       rating,
       itemId,
@@ -64,10 +29,9 @@ const NewReviewForm = ({
     };
 
     setReviews([newReview, ...reviews]);
-    setName("");
-    setGenre("");
+
     setReview("");
-    setRating("");
+    setRating(0);
 
     nav("/");
     console.log(reviews);
@@ -81,30 +45,7 @@ const NewReviewForm = ({
 
       <form onSubmit={handleSubmitNewReview} className="submit-new-review-form">
         {/* <h3>{reviewData.title}</h3> */}
-        <label>
-          FILM:
-          <input
-            type="text"
-            name="name"
-            placeholder="FILM NAME"
-            value={name}
-            onChange={(event) => {
-              setName(event.target.value);
-            }}
-          />
-        </label>
-        <label>
-          GENRE:
-          <input
-            type="text"
-            name="Genre"
-            placeholder="GENRE"
-            value={genre}
-            onChange={(event) => {
-              setGenre(event.target.value);
-            }}
-          />
-        </label>
+
         <label>
           ADD REVIEW:
           <textarea
