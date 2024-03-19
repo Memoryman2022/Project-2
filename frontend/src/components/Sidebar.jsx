@@ -22,6 +22,7 @@ export default function Sidebar() {
       .get("http://localhost:5005/reviews/")
       .then((res) => {
         setLastReview(res.data);
+        console.log(res);
       })
       .catch((error) => {
         console.error("Error fetching review:", error);
@@ -42,10 +43,10 @@ export default function Sidebar() {
     >
       <div className={`sidebar ${isSidebarVisible ? "visible" : "hidden"}`}>
         <img className="sidebar-image" src={sidebarImage} alt="sidebar" />
-        {lastReview && (
+        {lastReview && lastReview.length > 0 && (
           <div className="last-review">
-            <p>{lastReview.review}</p>
-            <p>Rating: {lastReview.rating}</p>
+            <p>{lastReview[lastReview.length - 1].review}</p>
+            <p>Rating: {lastReview[lastReview.length - 1].rating}</p>
           </div>
         )}
       </div>
