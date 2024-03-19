@@ -1,40 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import StarRating from "./StarRating.jsx";
+import axios from "axios";
 
-const NewReviewForm = ({
-  addReview,
-  reviews,
-  setReviews,
-  reviewData,
-  itemId,
-}) => {
+const NewReviewForm = () => {
   const [review, setReview] = useState("");
   const [rating, setRating] = useState(0);
+  const [randomFilm, setRandomFilm] = useState(null);
+
   const nav = useNavigate();
 
+  //get film
+  useEffect(() => {
+    axios
+      .get("http://localhost:5005/movies")
+      .then((res) => {
+        const randomIndex = Math.floor(Math.random() * res.data.length);
+        const randomFilm = res.data[randomIndex];
+        setRandomFilm(randomFilm);
+      })
+      .catch((error) => {
+        console.log("error getting film", error);
+      });
+  }, []);
+
+  //post review
   const handleSubmitNewReview = (e) => {
     e.preventDefault();
-
-    if (!review || !rating) {
-      alert("Please fill in all fields.");
+    console.log("is this it?", randomFilm);
+    if (!randomFilm) {
+      console.error("No random film selected.");
       return;
     }
 
     const newReview = {
       review,
       rating,
-      itemId,
-      id: reviews.length + 1,
+      itemId: randomFilm.id,
     };
 
-    setReviews([newReview, ...reviews]);
+    axios
+      .post("http://localhost:5005/reviews", newReview)
+      .then((res) => {
+        console.log("Review submitted successfully:", res.data);
+        nav("/movies");
+      })
+      .catch((error) => {
+        console.error("Error submitting review:", error);
+      });
+
+    // if (!review || !rating) {
+    //   alert("fill in all fields.");
+    //   return;
+    // }
 
     setReview("");
     setRating(0);
-
-    nav("/");
-    console.log(reviews);
   };
 
   return (
@@ -44,7 +65,12 @@ const NewReviewForm = ({
       </div>
 
       <form onSubmit={handleSubmitNewReview} className="submit-new-review-form">
-        {/* <h3>{reviewData.title}</h3> */}
+        {randomFilm && (
+          <div>
+            <h3>FILM: {randomFilm.title}</h3>
+            <img src={`${randomFilm.poster_path}`} alt={randomFilm.title} />
+          </div>
+        )}
 
         <label>
           ADD REVIEW:
