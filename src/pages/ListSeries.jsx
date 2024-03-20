@@ -4,12 +4,13 @@ import axios from "axios";
 import CarouselImg from "../components/CarouselImg";
 import { Link } from "react-router-dom";
 
-export default function ListSeries() {
+export default function ListSeries({ API_URL }) {
+	console.log(API_URL);
 	const [seriesList, setSeriesList] = useState([]);
 
 	const [genre, setGenre] = useState("");
 
-	const endPoint = "http://localhost:5005/series";
+	const endPoint = `${API_URL}/series`;
 
 	/*const apiKey = "3d0dbaba1ed955f27af66d0c59898ec2";
 	const tokenApi =
