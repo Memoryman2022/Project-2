@@ -141,7 +141,7 @@ const MovieSelection = ({ API_URL }) => {
           REVIEWS
           {reviews.map((reviewItem, index) => (
             <div className="review-item" key={index}>
-              <p>{reviewItem.review}</p>
+              <p>"{reviewItem.review}"</p>
               <DeleteReview
                 reviewId={reviewItem.id}
                 onDelete={(deletedReviewId) =>
