@@ -20,7 +20,6 @@ import Sidebar from "./components/Sidebar.jsx";
 import ReviewForm from "./components/ReviewForm.jsx";
 //css
 import "./App.css";
-import Select from "./pages/Select.jsx";
 
 function App() {
 	return (
