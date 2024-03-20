@@ -10,6 +10,9 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import ListMovies from "./pages/ListMovies.jsx";
 import ListSeries from "./pages/ListSeries.jsx";
+import Select from "./pages/Select.jsx";
+import MovieSelection from "./pages/MovieSelection.jsx";
+import SeriesSelection from "./pages/SeriesSelection.jsx";
 //components
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -20,28 +23,30 @@ import "./App.css";
 import Select from "./pages/Select.jsx";
 
 function App() {
-  return (
-    <>
-      <div className="App">
-        <Navbar />
+	return (
+		<>
+			<div className="App">
+				<Navbar />
 
-        <div className="main-container">
-          <Sidebar />
-          <Routes>
-            <Route path="/welcome" element={<Welcome />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-            <Route path="/ListSeries" element={<ListSeries />} />
-            <Route path="/ListMovies" element={<ListMovies />} />
-            <Route path="/Select" element={<Select />} />
-            <Route path="/Review" element={<ReviewForm />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </>
-  );
+				<div className="main-container">
+					<Sidebar />
+					<Routes>
+						<Route path="/welcome" element={<Welcome />} />
+						<Route path="/" element={<Home />} />
+						<Route path="/about" element={<About />} />
+						<Route path="*" element={<NotFound />} />
+						<Route path="/ListSeries" element={<ListSeries />} />
+						<Route path="/ListMovies" element={<ListMovies />} />
+						<Route path="/Select" element={<Select />} />
+						<Route path="/Review" element={<ReviewForm />} />
+						<Route path="/MovieSelect/:id" element={<MovieSelection />} />
+						<Route path="/SerieSelect/:id" element={<SeriesSelection />} />
+					</Routes>
+				</div>
+				<Footer />
+			</div>
+		</>
+	);
 }
 
 export default App;
