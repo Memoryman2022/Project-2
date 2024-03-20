@@ -14,7 +14,11 @@ const DeleteReview = ({ API_URL, reviewId, onDelete }) => {
       });
   };
 
-  return <button onClick={handleDelete}>Delete</button>;
+  return (
+    <button className="delete-btn" onClick={handleDelete}>
+      DELETE
+    </button>
+  );
 };
 
 export default DeleteReview;
