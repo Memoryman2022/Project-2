@@ -309,6 +309,7 @@ nav {
   text-align: center;
   padding-top: 50px;
   padding-left: 200px;
+  padding-right: 200px;
 }
 
 .resultMovies {
@@ -330,8 +331,6 @@ nav {
 .movieCard img {
   border-radius: 2px;
   margin: 3px;
-  width: 75%;
-  height: 40%;
 }
 .movieCard h6 {
   margin: 2px;
@@ -504,13 +503,19 @@ nav {
 .selected-movie-and-review-form {
   padding: 40px;
   padding-left: 200px;
-  height: 850px;
+  height: 1000px;
   width: 50%;
   background-color: #100f0f;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #b6b4b4;
+}
+
+.review-textarea {
+  background-color: #3f3d3d;
+  border-color: rgb(0, 255, 242);
+  border-width: 2px;
 }
 
 .selected-movie-and-review-form label {
@@ -526,7 +531,7 @@ nav {
   margin: 2px;
 }
 .movie-review-div {
-  height: 850px;
+  height: 1000px;
   width: 50%;
   background-color: #100f0f;
   color: #b6b4b4;
@@ -534,10 +539,30 @@ nav {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  padding: 70px;
+  padding-right: 200px;
+}
+
+.movie-review-div p {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 251, 255);
+  margin: 15px;
+  width: 500px;
+}
+
+/*DELETE*/
+
+.delete-btn {
+  border-radius: 4px;
+  background-color: #17fbff;
+  color: #333;
+  padding: 2px;
+  width: 200px;
 }
 
 .imgMovieSelection {
-  border-radius: 10px;
+  border-radius: 3px;
   width: 50%;
   margin: 15px;
 }
@@ -545,5 +570,6 @@ nav {
 .selected-movie-and-review-form h2,
 p {
   color: #b6b4b4;
-  width: 450px;
+  width: 600px;
+  padding: 20px;
 }

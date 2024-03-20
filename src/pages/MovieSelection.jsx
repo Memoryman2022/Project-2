@@ -113,6 +113,7 @@ const MovieSelection = ({ API_URL }) => {
               <label>
                 ADD REVIEW
                 <textarea
+                  className="review-textarea"
                   name="review"
                   placeholder="WRITE HERE..."
                   value={review}
@@ -138,7 +139,9 @@ const MovieSelection = ({ API_URL }) => {
           </div>
         </div>
         <div className="movie-review-div">
-          REVIEWS
+          <h4>
+            <strong>REVIEWS</strong>
+          </h4>
           {reviews.map((reviewItem, index) => (
             <div className="review-item" key={index}>
               <p>"{reviewItem.review}"</p>
