@@ -29,11 +29,11 @@ export default function Sidebar() {
       });
   };
 
-  useEffect(() => {
-    getLastReview();
-    const intervalId = setInterval(getLastReview, 5000);
-    return () => clearInterval(intervalId);
-  }, []);
+  // useEffect(() => {
+  //   getLastReview();
+  //   const intervalId = setInterval(getLastReview, 5000);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   return (
     <div
