@@ -20,32 +20,34 @@ import Sidebar from "./components/Sidebar.jsx";
 import ReviewForm from "./components/ReviewForm.jsx";
 //css
 import "./App.css";
+//CONNECT
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5005";
 
 function App() {
-	return (
-		<>
-			<div className="App">
-				<Navbar />
+  return (
+    <>
+      <div className="App">
+        <Navbar />
 
-				<div className="main-container">
-					<Sidebar />
-					<Routes>
-						<Route path="/welcome" element={<Welcome />} />
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="*" element={<NotFound />} />
-						<Route path="/ListSeries" element={<ListSeries />} />
-						<Route path="/ListMovies" element={<ListMovies />} />
-						<Route path="/Select" element={<Select />} />
-						<Route path="/Review" element={<ReviewForm />} />
-						<Route path="/MovieSelect/:id" element={<MovieSelection />} />
-						<Route path="/SerieSelect/:id" element={<SeriesSelection />} />
-					</Routes>
-				</div>
-				<Footer />
-			</div>
-		</>
-	);
+        <div className="main-container">
+          <Sidebar />
+          <Routes>
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/ListSeries" element={<ListSeries />} />
+            <Route path="/ListMovies" element={<ListMovies />} />
+            <Route path="/Select" element={<Select />} />
+            <Route path="/Review" element={<ReviewForm />} />
+            <Route path="/MovieSelect/:id" element={<MovieSelection />} />
+            <Route path="/SerieSelect/:id" element={<SeriesSelection />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;
