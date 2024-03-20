@@ -40,11 +40,20 @@ function App() {
 							path="/ListSeries"
 							element={<ListSeries API_URL={API_URL} />}
 						/>
-						<Route path="/ListMovies" element={<ListMovies />} />
+						<Route
+							path="/ListMovies"
+							element={<ListMovies API_URL={API_URL} />}
+						/>
 						<Route path="/Select" element={<Select />} />
 						<Route path="/Review" element={<ReviewForm />} />
-						<Route path="/MovieSelect/:id" element={<MovieSelection />} />
-						<Route path="/SerieSelect/:id" element={<SeriesSelection />} />
+						<Route
+							path="/MovieSelect/:id"
+							element={<MovieSelection API_URL={API_URL} />}
+						/>
+						<Route
+							path="/SerieSelect/:id"
+							element={<SeriesSelection API_URL={API_URL} />}
+						/>
 					</Routes>
 				</div>
 				<Footer />

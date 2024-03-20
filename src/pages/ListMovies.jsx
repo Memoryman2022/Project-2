@@ -4,12 +4,12 @@ import axios from "axios";
 import CarouselImg from "../components/CarouselImg";
 import { Link } from "react-router-dom";
 
-export default function ListMovies() {
+export default function ListMovies({ API_URL }) {
 	const [moviesList, setMoviesList] = useState([]);
 
 	const [genre, setGenre] = useState("");
 
-	const endPoint = "http://localhost:5005/movies";
+	const endPoint = `${API_URL}/movies`;
 	/*const apiKey = "3d0dbaba1ed955f27af66d0c59898ec2";
 	const tokenApi =
 		"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZDBkYmFiYTFlZDk1NWYyN2FmNjZkMGM1OTg5OGVjMiIsInN1YiI6IjY1ZjFjZDc0NDcwZWFkMDE2MjljNmZjNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9uzeZ1bJ9uNWBN-WlFCksLUIOXR9mIeF_IMcr0IczAQ";

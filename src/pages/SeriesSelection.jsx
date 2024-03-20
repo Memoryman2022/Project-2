@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-const SeriesSelection = () => {
+const SeriesSelection = ({ API_URL }) => {
 	const { id } = useParams();
 	const [serie, setSerie] = useState();
 	const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ const SeriesSelection = () => {
 	const nav = useNavigate();
 
 	useEffect(() => {
-		const url = "http://localhost:5005/Series";
+		const url = `${API_URL}/Series`;
 		const getMovies = async () => {
 			try {
 				const res = await axios.get(url);
@@ -59,7 +59,7 @@ const SeriesSelection = () => {
 			review,
 		};
 		console.log(newReview);
-		const url = "http://localhost:5005";
+		const url = API_URL;
 		axios
 			.post(`${url}/Reviews`, newReview)
 			.then((res) => {
