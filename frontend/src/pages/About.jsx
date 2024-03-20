@@ -71,7 +71,7 @@ function About() {
         <br /> <br />
         <h2>
           WELCOME TO FOCUS – WHERE EVERY RECOMMENDATION IS A STEP CLOSER TO YOUR
-          NEXT FAVOURITE FILM
+          NEXT FAVOURITE FILM.
         </h2>
       </p>
     </div>
