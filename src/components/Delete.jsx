@@ -5,7 +5,7 @@ const DeleteReview = ({ API_URL, reviewId, onDelete }) => {
   const handleDelete = () => {
     axios
       .delete(`${API_URL}/reviews/${reviewId}`)
-      .then((res) => {
+      .then(() => {
         onDelete(reviewId);
         console.log("Review deleted");
       })
