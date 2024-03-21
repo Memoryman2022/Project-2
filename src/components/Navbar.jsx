@@ -6,16 +6,19 @@ export default function Navbar() {
 
 	return (
 		<nav>
-			<img className="nav-logo" src={logo} alt="image-logo" />
+			<Link to="/Home">
+				<img className="nav-logo" src={logo} alt="image-logo" />
+			</Link>
 			<ul className="navbar-list">
 				<li className="navbar-item">
-					<Link to="/">WELCOME</Link>
+					<Link to="/Home">
+						<h5>HOME</h5>
+					</Link>
 				</li>
 				<li className="navbar-item">
-					<Link to="/Home">HOME</Link>
-				</li>
-				<li className="navbar-item">
-					<Link to="/about">ABOUT</Link>
+					<Link to="/about">
+						<h5>ABOUT</h5>
+					</Link>
 				</li>
 			</ul>
 		</nav>
