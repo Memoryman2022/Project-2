@@ -10,7 +10,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import ListMovies from "./pages/ListMovies.jsx";
 import ListSeries from "./pages/ListSeries.jsx";
-import Select from "./pages/Select.jsx";
+
 import MovieSelection from "./pages/MovieSelection.jsx";
 import SeriesSelection from "./pages/SeriesSelection.jsx";
 //components
@@ -32,8 +32,8 @@ function App() {
 				<div className="main-container">
 					<Sidebar />
 					<Routes>
-						<Route path="/welcome" element={<Welcome />} />
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Welcome />} />
+						<Route path="/Home" element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="*" element={<NotFound />} />
 						<Route
@@ -44,7 +44,7 @@ function App() {
 							path="/ListMovies"
 							element={<ListMovies API_URL={API_URL} />}
 						/>
-						<Route path="/Select" element={<Select />} />
+
 						<Route path="/Review" element={<ReviewForm />} />
 						<Route
 							path="/MovieSelect/:id"
