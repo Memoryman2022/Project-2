@@ -24,22 +24,22 @@ export default function ListMovies({ API_URL }) {
   }, []);
 
   const genres = [
-    { id: "28", name: "ACTION", icon: "../../public/action.png" },
-    { id: "12", name: "ADVENTURE", icon: "../../public/adventure.png" },
-    { id: "16", name: "ANIMATION", icon: "../../public/animation.png" },
-    { id: "35", name: "COMEDY", icon: "../../public/cinema.png" },
-    { id: "80", name: "CRIME", icon: "../../public/crime.png" },
-    { id: "99", name: "DOCUMENTARY", icon: "../../public/documentary.png" },
-    { id: "18", name: "DRAMA", icon: "../../public/drama.png" },
-    { id: "10751", name: "FAMILY", icon: "../../public/family.png" },
-    { id: "14", name: "FANTASY", icon: "../../public/fantasy.png" },
-    { id: "36", name: "HISTORY", icon: "../../public/history.png" },
-    { id: "27", name: "HORROR", icon: "../../public/horror.png" },
-    { id: "10402", name: "ROMANCE", icon: "../../public/romance.png" },
-    { id: "878", name: "SCIFI", icon: "../../public/scifi.png" },
-    { id: "53", name: "THRILLER", icon: "../../public/thriller.png" },
-    { id: "10752", name: "WAR", icon: "../../public/war.png" },
-    { id: "37", name: "WESTERN", icon: "../../public/western.png" },
+    { id: "28", name: "ACTION", icon: "/action.png" },
+    { id: "12", name: "ADVENTURE", icon: "/adventure.png" },
+    { id: "16", name: "ANIMATION", icon: "/animation.png" },
+    { id: "35", name: "COMEDY", icon: "/cinema.png" },
+    { id: "80", name: "CRIME", icon: "/crime.png" },
+    { id: "99", name: "DOCUMENTARY", icon: "/documentary.png" },
+    { id: "18", name: "DRAMA", icon: "/drama.png" },
+    { id: "10751", name: "FAMILY", icon: "/family.png" },
+    { id: "14", name: "FANTASY", icon: "/fantasy.png" },
+    { id: "36", name: "HISTORY", icon: "/history.png" },
+    { id: "27", name: "HORROR", icon: "/horror.png" },
+    { id: "10402", name: "ROMANCE", icon: "/romance.png" },
+    { id: "878", name: "SCIFI", icon: "/scifi.png" },
+    { id: "53", name: "THRILLER", icon: "/thriller.png" },
+    { id: "10752", name: "WAR", icon: "/war.png" },
+    { id: "37", name: "WESTERN", icon: "/western.png" },
   ];
 
   const genderSelection =

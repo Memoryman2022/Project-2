@@ -25,21 +25,21 @@ export default function ListSeries({ API_URL }) {
   }, [API_URL]);
 
   const seriesGenres = [
-    { id: "10759", name: "ACTION/ADVENTURE", icon: "../../public/action.png" },
-    { id: "16", name: "ANIMATION", icon: "../../public/animation.png" },
-    { id: "35", name: "COMEDY", icon: "../../public/cinema.png" },
-    { id: "80", name: "CRIME", icon: "../../public/crime.png" },
-    { id: "99", name: "DOCUMENTARY", icon: "../../public/documentary.png" },
-    { id: "18", name: "DRAMA", icon: "../../public/drama.png" },
-    { id: "10751", name: "FAMILY", icon: "../../public/family.png" },
-    { id: "10762", name: "KIDS", icon: "../../public/kids.png" },
-    { id: "9648", name: "MYSTERY", icon: "../../public/mystery.png" },
-    { id: "10763", name: "NEWS", icon: "../../public/news.png" },
-    { id: "10764", name: "REALITY", icon: "../../public/reality.png" },
-    { id: "10765", name: "SCIFI/FANTASY", icon: "../../public/scifi.png" },
-    { id: "10766", name: "SOAP", icon: "../../public/soap.png" },
-    { id: "10768", name: "WAR/POLITICS", icon: "../../public/war.png" },
-    { id: "37", name: "WESTERN", icon: "../../public/western.png" },
+    { id: "10759", name: "ACTION/ADVENTURE", icon: "/action.png" },
+    { id: "16", name: "ANIMATION", icon: "/animation.png" },
+    { id: "35", name: "COMEDY", icon: "/cinema.png" },
+    { id: "80", name: "CRIME", icon: "/crime.png" },
+    { id: "99", name: "DOCUMENTARY", icon: "/documentary.png" },
+    { id: "18", name: "DRAMA", icon: "/drama.png" },
+    { id: "10751", name: "FAMILY", icon: "/family.png" },
+    { id: "10762", name: "KIDS", icon: "/kids.png" },
+    { id: "9648", name: "MYSTERY", icon: "/mystery.png" },
+    { id: "10763", name: "NEWS", icon: "/news.png" },
+    { id: "10764", name: "REALITY", icon: "/reality.png" },
+    { id: "10765", name: "SCIFI/FANTASY", icon: "/scifi.png" },
+    { id: "10766", name: "SOAP", icon: "/soap.png" },
+    { id: "10768", name: "WAR/POLITICS", icon: "/war.png" },
+    { id: "37", name: "WESTERN", icon: "/western.png" },
   ];
   const genderSelection =
     genre == ""
