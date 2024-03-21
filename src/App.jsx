@@ -23,14 +23,12 @@ import "./App.css";
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5005";
 
 function App() {
-  return (
-    <>
-      <div className="App">
-        <Navbar />
-
+	return (
+		<>
+			<div className="App">
+				<Navbar />
 
 				<div className="main-container">
-					<Sidebar />
 					<Routes>
 						<Route path="/" element={<Welcome />} />
 						<Route path="/Home" element={<Home />} />
@@ -60,7 +58,6 @@ function App() {
 			</div>
 		</>
 	);
-
 }
 
 export default App;
