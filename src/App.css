@@ -196,17 +196,7 @@ nav {
 }
 
 .login-buttons-div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
-.login-button {
-	text-decoration: none;
-	background-color: black;
-	color: rgb(45, 247, 247);
-	width: 150px;
-}
 
 .welcome-container h1,
 h3 {
@@ -219,6 +209,34 @@ h3 {
 	border-radius: 5px;
 	border: none;
 	margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.login-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: black;
+  color: rgb(45, 247, 247);
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.login-button:focus,
+.login-button:visited:hover,
+.login-button:visited:focus {
+  background-color: rgb(45, 247, 247);
+  color: black;
+  border-color: rgb(45, 247, 247);
+
 }
 
 /*HOME PAGE*/
@@ -300,18 +318,6 @@ h3 {
 	background-repeat: no-repeat;
 }
 
-@keyframes changeBackground {
-	0% {
-		background-image: url("./assets/focus.png");
-	}
-	75% {
-		background-image: url("./assets/Logo.png");
-	}
-
-	100% {
-		background-image: url("./assets/focus.png");
-	}
-}
 .imgCar {
 	border-radius: 5px;
 }
@@ -324,6 +330,11 @@ h3 {
 	padding-top: 50px;
 	padding-left: 200px;
 	padding-right: 200px;
+}
+
+.total-movies h5 {
+  margin-top: 5px;
+  color: #17fbff;
 }
 
 .resultMovies {
@@ -392,7 +403,11 @@ h3 {
 }
 
 .containerSelect {
-	padding: 200px;
+
+  height: 1000px;
+  padding: 200px;
+  padding-top: 10px;
+
 }
 
 .imgSelect {
@@ -402,12 +417,11 @@ h3 {
 }
 
 .imgSelect img {
-	margin: 10px;
-	width: 70%;
-	height: 35vh;
-	border-radius: 20px;
-	animation: slit-in-vertical 2s ease-out both;
-	box-shadow: 1px 1px 30px white;
+
+  margin: 10px;
+  width: 100px;
+  animation: slit-in-vertical 2s ease-out both;
+
 }
 
 @keyframes slit-in-vertical {
@@ -476,9 +490,9 @@ h3 {
 }
 
 .containerSelect {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*Movie Selection*/
@@ -525,15 +539,17 @@ h3 {
 }
 
 .selected-movie-and-review-form {
-	padding: 40px;
-	padding-left: 200px;
-	height: 1000px;
-	width: 50%;
-	background-color: #100f0f;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: #b6b4b4;
+
+  padding: 40px;
+  padding-left: 200px;
+  height: 1000px;
+  width: 50%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b6b4b4;
+
 }
 
 .review-textarea {
@@ -555,16 +571,18 @@ h3 {
 	margin: 2px;
 }
 .movie-review-div {
-	height: 1000px;
-	width: 50%;
-	background-color: #100f0f;
-	color: #b6b4b4;
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: center;
-	padding: 70px;
-	padding-right: 200px;
+
+  height: 1000px;
+  width: 50%;
+  background-color: #000000;
+  color: #b6b4b4;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 70px;
+  padding-right: 200px;
+
 }
 
 .movie-review-div p {
@@ -573,6 +591,28 @@ h3 {
 	border-color: rgb(0, 251, 255);
 	margin: 15px;
 	width: 500px;
+}
+
+.selected-series-and-review-form {
+  padding: 40px;
+  padding-left: 200px;
+  height: 1000px;
+  width: 50%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b6b4b4;
+}
+.selected-series-and-review-form img {
+  width: 30%;
+}
+
+.selected-series-and-review-form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
 }
 
 /*DELETE*/
@@ -596,4 +636,53 @@ p {
 	color: #b6b4b4;
 	width: 600px;
 	padding: 20px;
+}
+
+/*GENRE GRID*/
+
+.genre-div {
+  width: 600px;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding-left: 80px;
+}
+
+.genre-button {
+  padding: 8px 30px 8px 8px;
+  background-color: #595959;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.1s ease;
+}
+
+.genre-button:hover {
+  background-color: #383838;
+  border: 2px solid #17fbff;
+  overflow: visible;
+}
+
+.genre-icon {
+  position: absolute;
+  left: 80%;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+  width: 35px;
+}
+
+.genre-button:hover .genre-icon {
+  transform: translateX(150%);
+  opacity: 1;
 }

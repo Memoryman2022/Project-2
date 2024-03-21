@@ -1,8 +1,10 @@
 import { useState } from "react";
 import focusGif from "../assets/welcomeGif.gif";
 import focusImage from "../assets/logoImage.png";
+
 import soundInic from "../assets/sounds/intro.wav";
 import { useNavigate } from "react-router-dom";
+
 
 function Welcome() {
 	const [showGif, setShowGif] = useState(false);
@@ -44,6 +46,7 @@ function Welcome() {
 	const enterPage = () => {
 		setShowGif(true);
 	};
+
 
 	return (
 		<div className="welcome-container" onClick={enterPage}>
@@ -96,6 +99,7 @@ function Welcome() {
 			)}
 		</div>
 	);
+
 }
 
 export default Welcome;
