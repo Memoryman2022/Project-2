@@ -378,6 +378,7 @@ nav {
 }
 
 .containerSelect {
+  height: 800px;
   padding: 200px;
 }
 
@@ -388,13 +389,9 @@ nav {
 }
 
 .imgSelect img {
-	margin: 10px;
-	width: 70%;
-	height: 35vh;
-	border-radius: 20px;
-	animation: slit-in-vertical 2s ease-out both;
-	box-shadow: 1px 1px 30px white;
-
+  margin: 10px;
+  width: 100px;
+  animation: slit-in-vertical 2s ease-out both;
 }
 
 @keyframes slit-in-vertical {
@@ -463,9 +460,9 @@ nav {
 }
 
 .containerSelect {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*Movie Selection*/
