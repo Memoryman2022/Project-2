@@ -601,20 +601,37 @@ p {
 }
 
 .genre-button {
-  padding: 8px;
-  padding-left: 10px;
-  background-color: #000000;
+  padding: 8px 30px 8px 8px;
+  background-color: #595959;
   color: white;
   border: 2px solid transparent;
   cursor: pointer;
   border-radius: 2px;
   width: 150px;
   display: flex;
-  align-items: start;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.1s ease;
 }
 
 .genre-button:hover {
   background-color: #383838;
-
   border: 2px solid #17fbff;
+  overflow: visible;
+}
+
+.genre-icon {
+  position: absolute;
+  left: 80%;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+  width: 35px;
+}
+
+.genre-button:hover .genre-icon {
+  transform: translateX(150%);
+  opacity: 1;
 }
