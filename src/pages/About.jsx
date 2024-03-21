@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import faces from "../assets/cinema.png";
 import clapper from "../assets/clapperboard.png";
-import filmroll from "../assets/film-roll.png";
+import oscar from "../assets/oscars.png";
 import spotlight from "../assets/spotlight.png";
 function About() {
   return (
@@ -42,7 +42,7 @@ function About() {
         search with intuitive filtering options. Whether you're in the mood for
         an action-packed adventure, a heartwarming romance, or a
         thought-provoking documentary, finding your next watch is a breeze.
-        <img className="images-left" src={faces} alt="faces" />
+        <img className="images-left" src={oscar} alt="faces" />
         <h2>Why Choose FOCUS?</h2>
         <br />
         <br />
@@ -59,7 +59,7 @@ function About() {
         <strong>Explore with Confidence:</strong> Each film in our database is
         accompanied by detailed information and user reviews, helping you make
         informed decisions about what to watch next.
-        <img className="images-left" src={spotlight} alt="spotlight" />
+        <img className="images-right" src={spotlight} alt="spotlight" />
         <h2>Join the FOCUS Community</h2>
         <br />
         <br />
