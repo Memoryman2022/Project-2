@@ -3,6 +3,7 @@ import axios from "axios";
 
 const DeleteReview = ({ API_URL, reviewId, onDelete }) => {
   const handleDelete = () => {
+    console.log(API_URL, reviewId, onDelete);
     axios
       .delete(`${API_URL}/reviews/${reviewId}`)
       .then(() => {
