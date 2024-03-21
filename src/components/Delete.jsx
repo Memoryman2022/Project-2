@@ -1,7 +1,7 @@
-import React from "react";
 import axios from "axios";
 
 const DeleteReview = ({ API_URL, reviewId, onDelete }) => {
+
   console.log(API_URL, reviewId, onDelete);
   const handleDelete = () => {
     console.log(API_URL, reviewId, onDelete);
@@ -16,11 +16,12 @@ const DeleteReview = ({ API_URL, reviewId, onDelete }) => {
       });
   };
 
-  return (
-    <button className="delete-btn" onClick={handleDelete}>
-      DELETE
-    </button>
-  );
+
+	return (
+		<button className="delete-btn" onClick={handleDelete}>
+			DELETE
+		</button>
+	);
 };
 
 export default DeleteReview;
