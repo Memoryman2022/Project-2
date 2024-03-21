@@ -286,18 +286,6 @@ nav {
   background-repeat: no-repeat;
 }
 
-@keyframes changeBackground {
-  0% {
-    background-image: url("./assets/focus.png");
-  }
-  75% {
-    background-image: url("./assets/Logo.png");
-  }
-
-  100% {
-    background-image: url("./assets/focus.png");
-  }
-}
 .imgCar {
   border-radius: 5px;
 }
@@ -598,6 +586,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+  padding-left: 80px;
 }
 
 .genre-button {
