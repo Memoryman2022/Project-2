@@ -79,7 +79,6 @@ const MovieSelection = ({ API_URL }) => {
       .get(`${API_URL}/reviews?movieId=${id}`)
       .then((res) => {
         setReviews(res.data);
-        console.log(res);
       })
       .catch((error) => {
         console.error("Error fetching review:", error);
@@ -103,8 +102,7 @@ const MovieSelection = ({ API_URL }) => {
             width={"100px"}
           />
           <h2> {newMovie[0].title}</h2>
-          {/* <h2> Original language: {newMovie[0].original_language}</h2> */}
-          <p> Overview: {newMovie[0].overview}</p>
+          <p>{newMovie[0].overview}</p>
           <div className="containerForm">
             <form
               onSubmit={handleSubmitNewReview}

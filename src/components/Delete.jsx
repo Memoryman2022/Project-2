@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 const DeleteReview = ({ API_URL, reviewId, onDelete }) => {
+  console.log(API_URL, reviewId, onDelete);
   const handleDelete = () => {
     console.log(API_URL, reviewId, onDelete);
     axios
