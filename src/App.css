@@ -36,6 +36,11 @@ nav {
 .nav-logo {
 	width: 60px;
 	margin-left: 70px;
+	border-radius: 50%;
+}
+
+.nav-logo:hover {
+	box-shadow: 1px 1px 15px white;
 }
 
 .navbar-list {
@@ -44,18 +49,22 @@ nav {
 	justify-content: space-between;
 	margin-right: 70px;
 	padding: 0;
+	text-decoration: none;
 }
 
 .navbar-item {
 	text-decoration: none;
 	display: inline;
 	margin: 1rem;
+}
+.navbar-item h5 {
 	color: #17fbff;
 }
 
 .navbar-item a:hover {
 	text-decoration: none;
 	color: #17fbff;
+	text-shadow: 1px 1px 15px white;
 }
 
 /*FOOTER*/
@@ -65,16 +74,32 @@ nav {
 	bottom: 0;
 	width: 100%;
 	background-color: #111010;
-	padding: 20px 0 20px;
 	color: #1effe5;
-	padding-left: 160px;
-}
-.footer ul {
 	display: flex;
 	flex-direction: row;
-	display: flex;
-	width: 85%;
-	justify-content: space-between;
+	justify-content: space-around;
+	padding: 10px 0;
+}
+
+.footer p {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.socialMedia {
+	width: 30%;
+}
+.namesFooter {
+	width: 35%;
+}
+.contactFooter {
+	width: 35%;
+}
+
+.socialMedia img {
+	width: 10%;
+	margin: 0 5px;
 }
 
 /*SIDEBAR*/
@@ -674,3 +699,5 @@ p {
 	transform: translateX(150%);
 	opacity: 1;
 }
+
+/*Footer*/
