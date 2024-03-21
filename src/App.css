@@ -388,10 +388,12 @@ nav {
 }
 
 .imgSelect img {
-	width: 100%;
-	height: 50vh;
+	margin: 10px;
+	width: 70%;
+	height: 35vh;
 	border-radius: 20px;
-	animation: slit-in-vertical 3s ease-out both;
+	animation: slit-in-vertical 2s ease-out both;
+	box-shadow: 1px 1px 30px white;
 }
 
 @keyframes slit-in-vertical {
@@ -457,6 +459,12 @@ nav {
 
 .cut-image {
 	width: 100px;
+}
+
+.containerSelect {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 /*Movie Selection*/
