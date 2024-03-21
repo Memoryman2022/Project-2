@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import faces from "../assets/cinema.png";
+
 import clapper from "../assets/clapperboard.png";
 import oscar from "../assets/oscars.png";
 import spotlight from "../assets/spotlight.png";

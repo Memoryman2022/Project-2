@@ -1,6 +1,7 @@
 import { useState } from "react";
 import focusGif from "../assets/welcomeGif.gif";
 import focusImage from "../assets/logoImage.png";
+import { Link } from "react-router-dom";
 
 function Welcome() {
   const [showGif, setShowGif] = useState(true);
@@ -77,7 +78,9 @@ function Welcome() {
               </label>
               <div className="login-buttons-div">
                 <button className="login-button" type="submit">
-                  <strong>SUBMIT</strong>
+                  <Link to="/">
+                    <strong>SUBMIT</strong>
+                  </Link>
                 </button>
               </div>
             </form>
