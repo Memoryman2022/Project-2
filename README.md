@@ -1,8 +1,8 @@
 # FOCUS
 
-## focus-frontend.netlify.app
+## [See the App!](focus-frontend.netlify.app)
 
-![](../Project-2/src/assets/FocusLogo_icon.png)
+![icon](./src/assets/FocusLogo_icon.png)
 
 ## Description
 
@@ -74,14 +74,14 @@ reviews: String
 
 ### Project
 
-[Focus](https://github.com/Memoryman2022/Project-2)
+[GitHub Project](https://github.com/Memoryman2022/Project-2)
 
-[Focus](https://focus-frontend.netlify.app/about)
+[Web Site](https://focus-frontend.netlify.app/about)
 
 ### Trello
 
-[](https://trello.com/b/dxeUZLfx/react-movie-project)
+[Trello](https://trello.com/b/dxeUZLfx/react-movie-project)
 
 ### Slides
 
-[](https://slides.com/rob_ironhack/deck)
+[Slides](https://slides.com/rob_ironhack/deck)
